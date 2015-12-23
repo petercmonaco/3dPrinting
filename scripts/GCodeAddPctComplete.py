@@ -3,18 +3,21 @@
 #Depend: GCode
 #Type: postprocess
 
+# Written by Peter Monaco, Dec 22, 2015
+# Drop in your <CuraInstallation>/plugins directory
+
 import re
 
-# remove these lines when it becomes a plugin:
-import sys
-inputFilename = sys.argv[1]
-outputFilename = "tmpout"
+### Un-comment these lines to use as a standalone script:
+#import sys
+#inputFilename = sys.argv[1]
+#outputFilename = "tmpout"
 
-# Re-add these lines to make it a plugin:
-#inputFilename = filename
-#outputFilename = filename
+### Comment-out these lines to make it a standalone script:
+inputFilename = filename
+outputFilename = filename
 
-# returns a float, or -1 if no E-val is present in that line
+# returns a float, or -1 if no Extrusion value is present in that line
 def findEValueInLine(line):
     tokens = line.split()
     for token in tokens:
