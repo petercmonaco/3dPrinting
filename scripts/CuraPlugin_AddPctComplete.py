@@ -1,5 +1,5 @@
 #Name: Display Build Progress
-#Info: During printing display the percentage of build complete
+#Info: During printing, display the percentage of build complete
 #Depend: GCode
 #Type: postprocess
 
