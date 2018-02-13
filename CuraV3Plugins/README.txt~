@@ -1,0 +1,1 @@
+I originally wrote a plugin for Cura 15+ to add GCode lines to every print, showing the "percentage complete" as the print progressed.  That code can be found in ../3dPrinting/
