@@ -1,0 +1,26 @@
+
+
+; Switch to T0
+M83 (switch to relative positioning)
+G1 X-50 Z20
+M104 S0 T1 (set other extruder temp to 0)
+M109 S0 T0 (set Heated Bed temperature)
+M104 S200 T0 (set extruder temperature) (temp updated by printOMatic)
+M6 T0 (wait for toolhead, and HBP to reach temperature)
+;; NOT NEEDED?? G1 X50 Z-20
+M82 (switch back to absolute positioning)
+G92 E{{grab value}}   (So that all the following E-values make sense)
+;
+
+
+; Switch to T1
+M83 (switch to relative positioning)
+G1 X-50 Z20
+M104 S0 T0 (set other extruder temp to 0)
+M109 S0 T1 (set Heated Bed temperature)
+M104 S200 T1 (set extruder temperature) (temp updated by printOMatic)
+M6 T1 (wait for toolhead, and HBP to reach temperature)
+;; NOT NEEDED??  G1 X50 Z-20
+M82 (switch back to absolute positioning)
+G92 E{{grab value}}   (So that all the following E-values make sense)
+;
